@@ -92,3 +92,16 @@ focusInput.addEventListener("focus", function() {
 focusInput.addEventListener("blur", function() {
     focusInput.style.borderColor = "";
 });
+
+// 10th Exercise: Mouseover and Mouseout Events
+let hoverBox = document.getElementById("hoverBox");
+hoverBox.addEventListener("mouseover", function() {
+    hoverBox.style.backgroundColor = "lightPink";
+    hoverBox.style.transform = "scale(1.2)";
+});
+hoverBox.addEventListener("mouseout", function() {
+    hoverBox.style.backgroundColor = "";
+    hoverBox.style.transform = "";
+});
+
+
