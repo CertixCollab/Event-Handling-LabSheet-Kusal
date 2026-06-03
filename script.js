@@ -169,3 +169,18 @@ nextBtn.addEventListener("click", function() {
     }
     showImage(currentIndex);
 });
+
+// 16th Exercise: Dark Mode Toggle
+let darkModeBtn = document.getElementById("darkModeBtn");
+darkModeBtn.addEventListener("click", function() {
+    if(document.body.classList.contains("dark-mode")) {
+        document.body.classList.remove("dark-mode");
+        darkModeBtn.textContent = "Switch to Dark Mode";
+    } else {
+        document.body.classList.add("dark-mode");
+        darkModeBtn.textContent = "Switch to Light Mode";
+    }
+    console.log("Dark mode toggled");
+});
+
+
