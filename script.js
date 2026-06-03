@@ -104,4 +104,8 @@ hoverBox.addEventListener("mouseout", function() {
     hoverBox.style.transform = "";
 });
 
-
+// 11th Exercise: Mouse Position Tracking
+let mousePosition = document.getElementById("mousePosition");
+document.addEventListener("mousemove", function(event) {
+    mousePosition.textContent = "X: " + event.clientX + " | Y: " + event.clientY;
+});
