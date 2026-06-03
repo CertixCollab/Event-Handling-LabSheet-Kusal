@@ -1,0 +1,71 @@
+/* General Styles */
+
+body{
+    font-family: Arial, sans-serif;
+    padding:20px;
+}
+
+section{
+    margin-bottom:30px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+input,
+textarea{
+    padding:8px;
+    margin:5px;
+}
+
+hr{
+    margin:30px 0;
+}
+
+/* Question 4 */
+
+#doubleBox{
+    width:200px;
+    height:200px;
+    background-color:gray;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Question 10 */
+
+#hoverBox{
+    width:200px;
+    height:200px;
+    background-color:lightblue;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.3s;
+}
+
+/* Question 12 */
+
+#parentDiv{
+    padding:30px;
+    background-color:lightgray;
+}
+
+/* Question 15 */
+
+#slider{
+    width:400px;
+    height:250px;
+    object-fit:cover;
+}
+
+/* Question 16 */
+
+.dark-mode{
+    background-color:black;
+    color:white;
+}
