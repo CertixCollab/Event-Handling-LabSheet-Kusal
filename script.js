@@ -183,4 +183,53 @@ darkModeBtn.addEventListener("click", function() {
     console.log("Dark mode toggled");
 });
 
+// 17th Exercise: Simple Calculator
+let num1 = document.getElementById("num1");
+let num2 = document.getElementById("num2");
+let addBtn = document.getElementById("addBtn");
+let subBtn = document.getElementById("subBtn");
+let mulBtn = document.getElementById("mulBtn");
+let divBtn = document.getElementById("divBtn");
+let resultDisplay = document.getElementById("result");
 
+function performOperation(operation) {
+    let number1 = parseFloat(num1.value);
+    let number2 = parseFloat(num2.value);
+    let result;
+    if (isNaN(number1) || isNaN(number2)) {
+        resultDisplay.textContent = "Please enter valid numbers.";
+        return;
+    }
+    switch (operation) {
+        case "add":
+            result = number1 + number2;
+            break;
+        case "subtract":
+            result = number1 - number2;
+            break;
+        case "multiply":
+            result = number1 * number2;
+            break;
+        case "divide":
+            if (number2 === 0) {
+                resultDisplay.textContent = "Error: Division by zero is not allowed.";
+                return;
+            }
+            result = number1 / number2;
+            break;
+    }
+    resultDisplay.textContent = "Result: " + result;
+}
+
+addBtn.addEventListener("click", function() {
+    performOperation("add");
+});
+subBtn.addEventListener("click", function() {
+    performOperation("subtract");
+});
+mulBtn.addEventListener("click", function() {
+    performOperation("multiply");
+});
+divBtn.addEventListener("click", function() {
+    performOperation("divide");
+});
