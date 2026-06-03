@@ -110,18 +110,16 @@ document.addEventListener("mousemove", function(event) {
     mousePosition.textContent = "X: " + event.clientX + " | Y: " + event.clientY;
 });
 
-// 12th Exercise: Event Propagation
+// 12th & 13th Exercise: Event Propagation and stopPropagation()
 let parentDiv = document.getElementById("parentDiv");
 let childBtn = document.getElementById("childBtn");
 
 parentDiv.addEventListener("click", function() {
-    alert("Parent Div Clicked");
-    console.log("Parent Div Clicked");
+    alert("Parent Div Clicked!");
 });
-childBtn.addEventListener("click", function() {
-    alert("Child Button Clicked");
-    console.log("Child Button Clicked");
-});
+
 childBtn.addEventListener("click", function(event) {
     event.stopPropagation();
+    alert("Child Button Clicked!");
 });
+
