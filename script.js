@@ -123,3 +123,18 @@ childBtn.addEventListener("click", function(event) {
     alert("Child Button Clicked!");
 });
 
+// 14th Exercise: Dynamic List Creation and Click Event
+let itemList = document.getElementById("itemList");
+let clickedItem = document.getElementById("clickedItem");
+for (let i = 1; i <= 5; i++) {
+    let li = document.createElement("li");
+    li.textContent = "Item " + i;
+    itemList.appendChild(li);
+}
+itemList.addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+        clickedItem.textContent = "Clicked Item: " + event.target.textContent;
+        clickedItem.style.color = "blue";
+        clickedItem.style.fontWeight = "bold";
+    }
+});
