@@ -138,3 +138,34 @@ itemList.addEventListener("click", function(event) {
         clickedItem.style.fontWeight = "bold";
     }
 });
+
+// 15th Exercise: Image Slider
+let imgSlider = document.getElementById("slider");
+let prevBtn = document.getElementById("prevBtn");
+let nextBtn = document.getElementById("nextBtn");
+
+let images = [
+    "https://picsum.photos/id/237/400/300",
+    "https://picsum.photos/id/238/400/300",
+    "https://picsum.photos/id/239/400/300",
+    "https://picsum.photos/id/240/400/300",
+    "https://picsum.photos/id/241/400/300"
+];
+let currentIndex = 0;
+function showImage(index) {
+    imgSlider.src = images[index];
+}
+prevBtn.addEventListener("click", function() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+    showImage(currentIndex);
+});
+nextBtn.addEventListener("click", function() {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    showImage(currentIndex);
+});
